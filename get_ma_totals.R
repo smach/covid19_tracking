@@ -1,6 +1,13 @@
 source("config.R")
 
 
+#' Function to get date and total COVID19 cases from Mass Dept of Public Health website
+#'
+#' @param the_url character string with URL of COVID19 case updates
+#'
+#' @return list with Date, Total, State
+#' @export
+#'
 get_ma_data <- function(the_url = ma_url) {
   ma_dataframe <- htmltab::htmltab(the_url, which = 1)
   ma_date <- names(ma_dataframe)[1]

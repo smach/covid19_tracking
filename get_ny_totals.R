@@ -1,5 +1,13 @@
 source("config.R")
 
+
+#' Function to get date and total COVID19 cases from NY public health dept. website
+#'
+#' @param the_url character string with URL of COVID19 case updates
+#'
+#' @return list with Date, Total, State
+#' @export
+#'
 get_ny_data <- function(the_url = ny_url){
   ny_dataframe <- htmltab::htmltab(the_url, which = 1)
   names(ny_dataframe) <- c("Category", "Cases")
