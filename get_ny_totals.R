@@ -18,7 +18,7 @@ get_ny_data <- function(the_url = ny_url){
   return(ny_results)
 }
 
-ny_cases <- get_ny_data()
+
 
 
 

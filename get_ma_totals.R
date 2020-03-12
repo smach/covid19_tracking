@@ -13,4 +13,4 @@ get_ma_data <- function(the_url = ma_url) {
   return(ma_results)
 }
 
-ma_cases <- get_ma_data()
+
